@@ -22,7 +22,7 @@ Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devi
 
 ```yaml
 - name: Android Kernel Action
-  uses: XenonTheInertG/Android-Recovery-actions@main
+  uses: XenonTheInertG/Android-Recovery-actions@V1.0
   env:
     MANIFEST: "Recovery Manifest URL with -b branch" or "orangefox" for orangefox android v10
     DT_LINK: "Your Device Tree Link"
@@ -35,6 +35,3 @@ Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devi
     TZ: "Dhaka/Bangladesh" # Set Time-Zone According To Your Region
 ```
 
--------------------------------------------------------------------------------------------
-# Credits
-[rokibhasansagar](https://github.com/rokibhasansagar) For His Cleanup Scripts.
