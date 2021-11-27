@@ -14,10 +14,10 @@ Path to Compiled Recovery is `/home/runner/work/out/target/product/*/*.img , *.z
 
 For Orangefox android V10 Use `orangefox` in `MANIFEST` `/home/runner/work/out/target/product/*/*.img , *.zip` 
  
-Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devices
+Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devices & For Android 9 devices you can use Manifest
 
-For Android 9 devices you can use Manifest
-----------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+
 # Example & Usages:
 
 ```yaml
@@ -35,6 +35,6 @@ For Android 9 devices you can use Manifest
     TZ: "Dhaka/Bangladesh" # Set Time-Zone According To Your Region
 ```
 
---------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 # Credits
 [rokibhasansagar](https://github.com/rokibhasansagar) For His Cleanup Scripts.
