@@ -1,5 +1,5 @@
 # android-recovery-actions
-An Github Action to build android recoveries in any workflow without any hassle of setting up environment & anything.
+A Github Action to build android recoveries in any workflow without any hassle of setting up environment & anything.
 
 # Features:
 - Easy to use & understand.
