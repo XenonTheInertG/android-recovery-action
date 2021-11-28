@@ -1,4 +1,4 @@
-# android-recovery-actions
+# android-recovery-action
 A Github Action to build android recoveries in any workflow without any hassle of setting up environment & anything.
 
 # Features:
@@ -22,7 +22,7 @@ Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devi
 
 ```yaml
 - name: Android Kernel Action
-  uses: XenonTheInertG/Android-Recovery-actions@V1.0
+  uses: XenonTheInertG/Android-Recovery-action@V1.0
   env:
     MANIFEST: "Recovery Manifest URL with -b branch" or "orangefox" for orangefox android v10
     DT_LINK: "Your Device Tree Link"
