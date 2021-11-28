@@ -1,4 +1,4 @@
-name: 'android-recovery-actions' 
+name: 'android-recovery-action' 
 author: 'XenonTheInertG' 
 description: 'Standalone Android Recovery Builder'
 
@@ -7,9 +7,9 @@ runs:
   steps:
     - run: curl -sL https://github.com/rokibhasansagar/slimhub_actions/raw/main/cleanup.sh | bash
       shell: bash
-    - run: curl -sL https://raw.githubusercontent.com/XenonTheInertG/android-recovery-actions/main/set_env.sh | bash
+    - run: curl -sL https://raw.githubusercontent.com/XenonTheInertG/android-recovery-action/main/set_env.sh | bash
       shell: bash
-    - run: curl -sL https://raw.githubusercontent.com/XenonTheInertG/android-recovery-actions/main/entrypoint.sh | bash
+    - run: curl -sL https://raw.githubusercontent.com/XenonTheInertG/android-recovery-action/main/entrypoint.sh | bash
       shell: bash
 branding:
   icon: 'box'
