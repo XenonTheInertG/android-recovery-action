@@ -21,8 +21,8 @@ Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devi
 # Example & Usages:
 
 ```yaml
-- name: Android Kernel Action
-  uses: XenonTheInertG/Android-Recovery-action@V1.0
+- name: Android Recovery Action
+  uses: XenonTheInertG/Android-Recovery-action@V1.2
   env:
     MANIFEST: "Recovery Manifest URL with -b branch" or "orangefox" for orangefox android v10
     DT_LINK: "Your Device Tree Link"
