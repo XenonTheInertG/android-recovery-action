@@ -1,16 +1,19 @@
 name: 'android-recovery-action' 
 author: 'XenonTheInertG' 
-description: 'Standalone Android Recovery Builder'
+description: 'Standalone Android Recovery Builder using github action.'
 
 runs:
   using: "composite"
   steps:
     - run: curl -sL https://github.com/rokibhasansagar/slimhub_actions/raw/main/cleanup.sh | bash
+      name: Cleanup Runner
       shell: bash
-    - run: curl -sL https://raw.githubusercontent.com/XenonTheInertG/android-recovery-action/main/set_env.sh | bash
+    - run: $GITHUB_ACTION_PATH/set_env.sh
+      name: Setup Environment
       shell: bash
-    - run: curl -sL https://raw.githubusercontent.com/XenonTheInertG/android-recovery-action/main/entrypoint.sh | bash
+    - run: $GITHUB_ACTION_PATH/entrypoint.sh
+      name: Build Recovery Image
       shell: bash
 branding:
   icon: 'box'
-  color: 'black'
+  color: 'yellow'
