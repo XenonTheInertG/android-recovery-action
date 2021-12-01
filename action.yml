@@ -8,7 +8,7 @@ runs:
     - run: curl -sL https://github.com/rokibhasansagar/slimhub_actions/raw/main/cleanup.sh | bash
       name: Cleanup Runner
       shell: bash
-    - run: ${GITHUB_ACTION_PATH}/entrypoint.sh
+    - run: curl -sL https://github.com/XenonTheInertG/android-recovery-action/raw/main/entrypoint.sh | bash
       name: Build Recovery Image
       shell: bash
 branding:
