@@ -6,15 +6,40 @@ A Github Action to build android recoveries in any workflow without any hassle o
 - Faster building.
 - Supports all types of recoveries.
 
-# Notes
+# Build Platform
 
-There is Only Support For `ubuntu-20.04` also Known As `ubuntu-latest`
+Build either on `ubuntu-18.04` or `ubuntu-20.04` also Known As `ubuntu-latest` runner.
 
-Path to Compiled Recovery is `/home/runner/work/out/target/product/*/*.img , *.zip`
+# Output
 
-For Orangefox android V10 Use `orangefox` in `MANIFEST` `/home/runner/work/out/target/product/*/*.img , *.zip` 
- 
-Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devices & For Android 9 devices you can use Manifest
+As the Working Directory where the repo-sync will occur is set in `/home/runner/builder/`, accessible from `${BuildPath}`.
+
+So, Compiled Recovery will be found under `/home/runner/builder/out/target/product/*/*{.img,.zip}`. Same can be accessed using `${BuildPath}/out/target/product/${CODENAME}/*{.img,.zip}`
+
+# Notes for Orangefox
+
+Only for Orangefox Android V10 dynamic devices, Use `orangefox10` as `MANIFEST`.
+For Android 9 devices you can use Manifest URL.
+
+# Usages
+
+**Note:** If you want to minimize the input in the Workflow YAML File, Read below:
+
+- Rename your Device Tree Repo in this format, `android_device_VENDOR_CODENAME`.
+  If you do this, you won't need to add `VENDOR`, `CODENAME` and `DT_LINK` in the yaml `env` key.
+  They will be fetched automatically from your Repo address.
+- `KERNEL_LINK` is optional, use this only if you want to build kernel from source code.
+- `TARGET` is set as `recoveryimage` by default.
+  Unless you want to build `bootimage` or something, don't provide anything.
+- `FLAVOR` is set as `eng` by default.
+  Unless you want to build an `userdebug` build, don't provide anything.
+- `EXTRA_CMD` key is added if you want to run some user-defined commands such as patchworks before compilation.
+  Don't use it if you don't have anything to add.
+- `TZ` (Timezone) is set as `UTC` by default.
+  Unless you want to change the Timezone, ignore it.
+If you followed these steps, you will need to provide only one `env` variable, `MANIFEST`. That's it.
+
+If you still want to do things manual way, here is the full format -
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -22,7 +47,7 @@ Caution :- `orangefox` term is Only For Android10 based devices aka dynamic devi
 
 ```yaml
 - name: Android Recovery Action
-  uses: XenonTheInertG/Android-Recovery-action@V1.2
+  uses: XenonTheInertG/android-recovery-action@main
   env:
     MANIFEST: "Recovery Manifest URL with -b branch" or "orangefox" for orangefox android v10
     DT_LINK: "Your Device Tree Link"
