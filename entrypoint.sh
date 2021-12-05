@@ -17,15 +17,6 @@ while ((${SECONDS_LEFT:=10} > 0)); do
 done
 unset SECONDS_LEFT
 
-echo "::group::Free Space Checkup"
-if [[ ! $(df / --output=avail | tail -1 | awk '{print $NF}') -ge 41943040 ]]; then
-    printf "Please use 'slimhub_actions@main' Action prior to this Recovery Compiler Action to gain at least 40 GB space\n"
-    exit 1
-else
-    printf "You have %s space available\n" "$(df -h / --output=avail | tail -1 | awk '{print $NF}')"
-fi
-echo "::endgroup::"
-
 echo "::group::Load variables & configuration"
 if [[ -z ${MANIFEST} ]]; then
     printf "Please Provide A Manifest URL with/without Branch\n"
