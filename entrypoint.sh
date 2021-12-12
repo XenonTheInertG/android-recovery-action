@@ -7,14 +7,14 @@
 #
 # Copyright (C) 2021 XenonTheInertG
 
-printf "\e[1;32m \u2730 
+printf " 
     _           _         _    _     ___                                  _      _   _           
    /_\  _ _  __| |_ _ ___(_)__| |___| _ \___ __ _____ _____ _ _ _  _ ___ /_\  __| |_(_)___ _ _   
   / _ \| ' \/ _` | '_/ _ \ / _` |___|   / -_) _/ _ \ V / -_) '_| || |___/ _ \/ _|  _| / _ \ ' \  
  /_/ \_\_||_\__,_|_| \___/_\__,_|   |_|_\___\__\___/\_/\___|_|  \_, |  /_/ \_\__|\__|_\___/_||_| 
                                                                 |__/                             
-\e[0m\n\n"
-
+"
+# TODO:Resize this ASCII art to show properly
 # Echo Loop
 while ((${SECONDS_LEFT:=10} > 0)); do
     printf "Please wait %.fs ...\n" "${SECONDS_LEFT}"
