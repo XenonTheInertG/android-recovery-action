@@ -24,7 +24,7 @@ For Android 9 devices you can use Manifest URL.
 # Usages
 
 **Note:** If you want to minimize the input in the Workflow YAML File, Read below:
-
+- Create an `YAML` file in device tree's repo(.github/workflows/*.yaml)
 - Rename your Device Tree Repo in this format, `android_device_VENDOR_CODENAME`.
   If you do this, you won't need to add `VENDOR`, `CODENAME` and `DT_LINK` in the yaml `env` key.
   They will be fetched automatically from your Repo address.
