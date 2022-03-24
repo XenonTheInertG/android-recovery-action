@@ -4,6 +4,7 @@ description: 'Standalone Android Recovery Builder using github action.'
 
 runs:
   using: "composite"
+  image: Dockerfile
   steps:
     - run: curl -sL https://github.com/rokibhasansagar/slimhub_actions/raw/main/cleanup.sh | bash
       name: Cleanup Runner

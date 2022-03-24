@@ -12,9 +12,9 @@ Build either on `ubuntu-18.04` or `ubuntu-20.04` also Known As `ubuntu-latest` r
 
 # Output
 
-As the Working Directory where the repo-sync will occur is set in `/home/runner/builder/`, accessible from `${BuildPath}`.
+As the Working Directory where the repo-sync will occur is set in `/home/runner/builder/`, accessible from `${result}`.
 
-So, Compiled Recovery will be found under `/home/runner/builder/out/target/product/*/*{.img,.zip}`. Same can be accessed using `${BuildPath}/out/target/product/${CODENAME}/*{.img,.zip}`
+So, Compiled Recovery will be found under `/home/runner/output/out/target/product/*/*{.img,.zip}`. Same can be accessed using `${result}/out/target/product/${CODENAME}/*{.img,.zip}`
 
 # Notes for Orangefox
 
